@@ -297,6 +297,22 @@ ul {
     margin-top: 2px;
 }
 
+/* Spots available indicator */
+.spots {
+    display: block;
+    font-size: 0.55rem;
+    opacity: 0.85;
+    margin-top: 2px;
+    font-weight: 400;
+}
+
+.spots.full {
+    background: rgba(255,255,255,0.25);
+    padding: 1px 4px;
+    border-radius: 3px;
+    font-weight: 600;
+}
+
 .virtual-badge-inline {
     display: inline-block;
     background: rgba(28,77,58,.08);
@@ -386,6 +402,32 @@ ul {
     background: rgba(28,77,58,.08);
     border: 1px solid rgba(28,77,58,.2);
     color: var(--color-primary);
+}
+
+/* Workshop schedule section */
+.workshop-schedule {
+    background: var(--color-bg);
+    padding: var(--space-md);
+    border-radius: var(--radius-md);
+    margin-top: var(--space-md);
+}
+
+.workshop-schedule h4 {
+    margin-top: 0;
+    margin-bottom: var(--space-sm);
+    color: var(--color-primary);
+}
+
+.workshop-schedule p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+.schedule-note {
+    margin-top: var(--space-sm) !important;
+    font-style: italic;
+    color: var(--color-text-light);
+    font-size: 0.9rem;
 }
 
 /* Register button */
