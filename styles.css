@@ -1,28 +1,33 @@
 /* ===========================================
    WATER BEARFIELD SCHOOL - WORKSHOP SCHEDULE
 
-   Color Palette (easy to customize):
+   Color Palette - Matches waterbearfieldschool.org
    - Edit the CSS variables below to change colors site-wide
    =========================================== */
 
 :root {
-    /* Main brand colors - edit these to change the whole site's look */
-    --color-primary: #2d6a4f;      /* Deep green */
-    --color-secondary: #40916c;    /* Medium green */
-    --color-accent: #f77f00;       /* Warm orange */
-    --color-highlight: #d62828;    /* Bold red */
+    /* Main brand colors - matching WFS site */
+    --color-primary: #1c4d3a;      /* Dark teal/green */
+    --color-secondary: #0b6b50;    /* Teal link color */
+    --color-accent: #1c4d3a;       /* Same as primary for consistency */
+    --color-highlight: #8B6914;    /* Gold/amber for highlights */
 
-    /* Workshop-specific colors */
-    --color-mesh: #7209b7;         /* Purple for mesh radio */
-    --color-power: #f77f00;        /* Orange for off-grid power */
-    --color-telemetry: #0096c7;    /* Blue for telemetry */
-    --color-wildcard: #2d6a4f;     /* Green for wildcard */
+    /* Workshop-specific colors - harmonized with WFS palette */
+    --color-mesh: #1c4d3a;         /* Primary teal for mesh radio */
+    --color-power: #8B6914;        /* Gold for off-grid power */
+    --color-telemetry: #0b6b50;    /* Teal for telemetry */
+    --color-wildcard: #4a7c6f;     /* Lighter teal for wildcard */
 
-    /* Neutral colors */
-    --color-bg: #fefae0;           /* Warm cream background */
-    --color-bg-alt: #faedcd;       /* Slightly darker cream */
-    --color-text: #283618;         /* Dark green-brown text */
-    --color-text-light: #606c38;   /* Lighter text */
+    /* Neutral colors - matching WFS site */
+    --color-bg: #f7f7f5;           /* Light gray background */
+    --color-bg-alt: #f0f0ed;       /* Slightly darker gray */
+    --color-text: #1f1f1f;         /* Dark text */
+    --color-text-light: #6b6b6b;   /* Muted gray text */
+    --color-card: #ffffff;         /* White card background */
+    --color-border: #e6e6e3;       /* Light border/divider */
+
+    /* Shadow - matching WFS site */
+    --shadow: 0 1px 2px rgba(0,0,0,.04), 0 8px 24px rgba(0,0,0,.06);
 
     /* Spacing */
     --space-sm: 0.5rem;
@@ -46,8 +51,7 @@ html {
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
+    font: 16px/1.55 Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     color: var(--color-text);
     background-color: var(--color-bg);
     margin: 0;
@@ -60,12 +64,14 @@ h1, h2, h3, h4 {
 }
 
 a {
-    color: var(--color-primary);
-    text-decoration: none;
+    color: var(--color-secondary);
+    text-decoration: underline;
+    text-decoration-color: color-mix(in oklab, var(--color-secondary) 40%, transparent);
+    text-underline-offset: 2px;
 }
 
 a:hover {
-    text-decoration: underline;
+    color: var(--color-primary);
 }
 
 ul {
@@ -131,10 +137,11 @@ ul {
     display: flex;
     align-items: center;
     gap: var(--space-sm);
-    background: white;
+    background: var(--color-card);
     padding: var(--space-sm) var(--space-md);
     border-radius: var(--radius-lg);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow);
     font-weight: 500;
 }
 
@@ -157,15 +164,26 @@ ul {
     color: var(--color-primary);
     font-size: 2rem;
     margin-bottom: var(--space-md);
+    padding-top: var(--space-md);
+}
+
+.intro-text {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto var(--space-lg);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--color-text);
 }
 
 .calendar-note {
     text-align: center;
-    background: white;
+    background: var(--color-card);
     padding: var(--space-md);
-    border-radius: var(--radius-md);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
     margin-bottom: var(--space-xl);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    box-shadow: var(--shadow);
 }
 
 /* Individual month container */
@@ -187,10 +205,11 @@ ul {
 .calendar-grid {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    background: white;
-    border: 2px solid var(--color-primary);
+    background: var(--color-card);
+    border: 1px solid var(--color-border);
     border-top: none;
-    border-radius: 0 0 var(--radius-md) var(--radius-md);
+    border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+    box-shadow: var(--shadow);
 }
 
 .day-header {
@@ -199,14 +218,14 @@ ul {
     text-align: center;
     font-weight: 600;
     color: var(--color-text-light);
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid var(--color-border);
 }
 
 .day {
     min-height: 100px;
     padding: var(--space-sm);
-    border-right: 1px solid #eee;
-    border-bottom: 1px solid #eee;
+    border-right: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
     position: relative;
 }
 
@@ -215,7 +234,7 @@ ul {
 }
 
 .day.empty {
-    background: #f9f9f9;
+    background: var(--color-bg);
 }
 
 .date {
@@ -279,10 +298,11 @@ ul {
 
 .virtual-badge-inline {
     display: inline-block;
-    background: var(--color-highlight);
-    color: white;
+    background: rgba(28,77,58,.08);
+    border: 1px solid rgba(28,77,58,.2);
+    color: var(--color-primary);
     padding: 2px 8px;
-    border-radius: 4px;
+    border-radius: 999px;
     font-size: 0.85rem;
     font-weight: 500;
 }
@@ -304,15 +324,16 @@ ul {
 }
 
 .workshop-card {
-    background: white;
+    background: var(--color-card);
     border-radius: var(--radius-lg);
     padding: var(--space-lg);
     margin-bottom: var(--space-lg);
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-    border-left: 6px solid var(--color-primary);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--color-border);
+    border-left: 5px solid var(--color-primary);
 }
 
 .workshop-mesh-card {
@@ -361,26 +382,28 @@ ul {
 }
 
 .badge-beginner {
-    background: #d8f3dc;
+    background: rgba(28,77,58,.08);
+    border: 1px solid rgba(28,77,58,.2);
     color: var(--color-primary);
 }
 
 /* Register button */
 .register-btn {
     display: inline-block;
-    background: var(--color-accent);
-    color: white;
+    color: var(--color-primary);
     padding: var(--space-sm) var(--space-lg);
+    border: 2px solid var(--color-primary);
     border-radius: var(--radius-md);
     font-weight: 600;
     font-size: 1rem;
     margin-top: var(--space-md);
-    transition: background 0.2s, transform 0.15s;
+    transition: all 0.2s ease;
+    text-decoration: none;
 }
 
 .register-btn:hover {
-    background: #e67300;
-    transform: translateY(-2px);
+    background: var(--color-primary);
+    color: white;
     text-decoration: none;
 }
 
@@ -416,16 +439,17 @@ ul {
 }
 
 .tier {
-    background: white;
+    background: var(--color-card);
     border-radius: var(--radius-lg);
     padding: var(--space-lg);
     text-align: center;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--color-border);
     transition: transform 0.2s;
 }
 
 .tier:hover {
-    transform: translateY(-4px);
+    transform: translateY(-2px);
 }
 
 .tier-price {
@@ -510,11 +534,12 @@ ul {
 }
 
 .virtual-section ul {
-    background: white;
+    background: var(--color-card);
     padding: var(--space-lg);
     padding-left: calc(var(--space-lg) + 1.5rem);
-    border-radius: var(--radius-md);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow);
 }
 
 .virtual-section li {
@@ -539,14 +564,20 @@ ul {
 
 .email-link {
     display: inline-block;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: 600;
-    color: var(--color-accent);
+    color: var(--color-primary);
     margin: var(--space-md) 0;
+    padding: 8px 12px;
+    border: 2px solid var(--color-primary);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    transition: all 0.2s ease;
 }
 
 .email-link:hover {
-    color: var(--color-highlight);
+    background: var(--color-primary);
+    color: white;
 }
 
 .minimum-note {
