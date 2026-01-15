@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop Schedule - Water Bearfield School</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="site-header">
+        <h1>Water Bearfield School</h1>
+        <p class="tagline">Hands-on workshops for community resilience</p>
+    </header>
+
+    <!-- INTRO SECTION -->
+    <section class="intro">
+        <div class="intro-content">
+            <h2>Learn. Build. Connect.</h2>
+            <p>
+                Join us for hands-on workshops where you'll learn practical skills for off-grid living,
+                communication resilience, and community infrastructure. No experience needed - just curiosity
+                and a willingness to learn alongside your neighbors.
+            </p>
+            <p>
+                Each workshop gives you real, usable knowledge. Build a mesh radio node for emergency
+                communications. Set up solar charging for your devices. Create sensors to monitor your
+                garden or home. These aren't just classes - they're skills that strengthen our community's
+                ability to help each other.
+            </p>
+            <div class="intro-highlights">
+                <div class="highlight">
+                    <span class="highlight-icon">&#127793;</span>
+                    <span>Beginner-friendly</span>
+                </div>
+                <div class="highlight">
+                    <span class="highlight-icon">&#128736;</span>
+                    <span>Take home what you build</span>
+                </div>
+                <div class="highlight">
+                    <span class="highlight-icon">&#129309;</span>
+                    <span>Solidarity pricing</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CALENDAR SECTION -->
+    <section class="calendar-section">
+        <h2>Upcoming Workshops</h2>
+        <p class="calendar-note">
+            <strong>Times:</strong> Morning sessions at 10 AM | Evening sessions at 6 PM<br>
+            <strong>Duration:</strong> 2 hours<br>
+            <strong>Location:</strong> Greater Boston Area - exact location sent after signup
+        </p>
+
+        <!-- ===================== FEBRUARY 2026 ===================== -->
+        <!-- To edit: Change the workshop topic, time, and link in each day's div -->
+        <div class="month">
+            <h3>February 2026</h3>
+            <div class="calendar-grid">
+                <div class="day-header">Sun</div>
+                <div class="day-header">Mon</div>
+                <div class="day-header">Tue</div>
+                <div class="day-header">Wed</div>
+                <div class="day-header">Thu</div>
+                <div class="day-header">Fri</div>
+                <div class="day-header">Sat</div>
+
+                <!-- Week 1 -->
+                <div class="day"><span class="date">1</span></div>
+                <div class="day"><span class="date">2</span>
+                    <a href="#telemetry" class="workshop workshop-telemetry">
+                        <span class="workshop-time">6 PM</span>
+                        Telemetry
+                    </a>
+                </div>
+                <div class="day"><span class="date">3</span>
+                    <a href="#mesh-radio" class="workshop workshop-mesh">
+                        <span class="workshop-time">10 AM</span>
+                        Mesh Radio
+                    </a>
+                </div>
+                <div class="day"><span class="date">4</span></div>
+                <div class="day"><span class="date">5</span>
+                    <a href="#off-grid-power" class="workshop workshop-power">
+                        <span class="workshop-time">10 AM</span>
+                        Off-Grid Power
+                    </a>
+                </div>
+                <div class="day"><span class="date">6</span>
+                    <a href="#wildcard" class="workshop workshop-wildcard">
+                        <span class="workshop-time">6 PM</span>
+                        Cold Frames
+                    </a>
+                </div>
+                <div class="day"><span class="date">7</span></div>
+
+                <!-- Week 2 -->
+                <div class="day"><span class="date">8</span></div>
+                <div class="day"><span class="date">9</span>
+                    <a href="#mesh-radio" class="workshop workshop-mesh">
+                        <span class="workshop-time">6 PM</span>
+                        Mesh Radio
+                    </a>
+                </div>
+                <div class="day"><span class="date">10</span>
+                    <a href="#telemetry" class="workshop workshop-telemetry">
+                        <span class="workshop-time">10 AM</span>
+                        Telemetry
+                    </a>
+                </div>
+                <div class="day"><span class="date">11</span></div>
+                <div class="day"><span class="date">12</span>
+                    <a href="#wildcard" class="workshop workshop-wildcard">
+                        <span class="workshop-time">10 AM</span>
+                        Rainwater Capture
+                    </a>
+                </div>
+                <div class="day"><span class="date">13</span>
+                    <a href="#off-grid-power" class="workshop workshop-power virtual">
+                        <span class="workshop-time">6 PM</span>
+                        Off-Grid Power
+                        <span class="virtual-badge">Virtual</span>
+                    </a>
+                </div>
+                <div class="day"><span class="date">14</span></div>
+
+                <!-- Week 3 -->
+                <div class="day"><span class="date">15</span></div>
+                <div class="day"><span class="date">16</span>
+                    <a href="#off-grid-power" class="workshop workshop-power">
+                        <span class="workshop-time">6 PM</span>
+                        Off-Grid Power
+                    </a>
+                </div>
+                <div class="day"><span class="date">17</span>
+                    <a href="#wildcard" class="workshop workshop-wildcard">
+                        <span class="workshop-time">10 AM</span>
+                        Temp Monitoring
+                    </a>
+                </div>
+                <div class="day"><span class="date">18</span></div>
+                <div class="day"><span class="date">19</span>
+                    <a href="#mesh-radio" class="workshop workshop-mesh">
+                        <span class="workshop-time">10 AM</span>
+                        Mesh Radio
+                    </a>
+                </div>
+                <div class="day"><span class="date">20</span>
+                    <a href="#telemetry" class="workshop workshop-telemetry">
+                        <span class="workshop-time">6 PM</span>
+                        Telemetry
+                    </a>
+                </div>
+                <div class="day"><span class="date">21</span></div>
+
+                <!-- Week 4 -->
+                <div class="day"><span class="date">22</span></div>
+                <div class="day"><span class="date">23</span>
+                    <a href="#wildcard" class="workshop workshop-wildcard">
+                        <span class="workshop-time">6 PM</span>
+                        Solar Charging
+                    </a>
+                </div>
+                <div class="day"><span class="date">24</span>
+                    <a href="#off-grid-power" class="workshop workshop-power">
+                        <span class="workshop-time">10 AM</span>
+                        Off-Grid Power
+                    </a>
+                </div>
+                <div class="day"><span class="date">25</span></div>
+                <div class="day"><span class="date">26</span>
+                    <a href="#telemetry" class="workshop workshop-telemetry virtual">
+                        <span class="workshop-time">10 AM</span>
+                        Telemetry
+                        <span class="virtual-badge">Virtual</span>
+                    </a>
+                </div>
+                <div class="day"><span class="date">27</span>
+                    <a href="#mesh-radio" class="workshop workshop-mesh">
+                        <span class="workshop-time">6 PM</span>
+                        Mesh Radio
+                    </a>
+                </div>
+                <div class="day"><span class="date">28</span></div>
+            </div>
+        </div>
+
+        <!-- ===================== MARCH 2026 ===================== -->
+        <div class="month">
+            <h3>March 2026</h3>
+            <div class="calendar-grid">
+                <div class="day-header">Sun</div>
+                <div class="day-header">Mon</div>
+                <div class="day-header">Tue</div>
+                <div class="day-header">Wed</div>
+                <div class="day-header">Thu</div>
+                <div class="day-header">Fri</div>
+                <div class="day-header">Sat</div>
+
+                <!-- Week 1 -->
+                <div class="day"><span class="date">1</span></div>
+                <div class="day"><span class="date">2</span>
+                    <a href="#mesh-radio" class="workshop workshop-mesh">
+                        <span class="workshop-time">6 PM</span>
+                        Mesh Radio
+                    </a>
+                </div>
+                <div class="day"><span class="date">3</span>
+                    <a href="#off-grid-power" class="workshop workshop-power">
+                        <span class="workshop-time">10 AM</span>
+                        Off-Grid Power
+                    </a>
+                </div>
+                <div class="day"><span class="date">4</span></div>
+                <div class="day"><span class="date">5</span>
+                    <a href="#telemetry" class="workshop workshop-telemetry">
+                        <span class="workshop-time">10 AM</span>
+                        Telemetry
+                    </a>
+                </div>
+                <div class="day"><span class="date">6</span>
+                    <a href="#wildcard" class="workshop workshop-wildcard">
+                        <span class="workshop-time">6 PM</span>
+                        Garden Carts
+                    </a>
+                </div>
+                <div class="day"><span class="date">7</span></div>
+
+                <!-- Week 2 -->
+                <div class="day"><span class="date">8</span></div>
+                <div class="day"><span class="date">9</span>
+                    <a href="#telemetry" class="workshop workshop-telemetry">
+                        <span class="workshop-time">6 PM</span>
+                        Telemetry
+                    </a>
+                </div>
+                <div class="day"><span class="date">10</span>
+                    <a href="#wildcard" class="workshop workshop-wildcard">
+                        <span class="workshop-time">10 AM</span>
+                        Cold Frames
+                    </a>
+                </div>
+                <div class="day"><span class="date">11</span></div>
+                <div class="day"><span class="date">12</span>
+                    <a href="#mesh-radio" class="workshop workshop-mesh virtual">
+                        <span class="workshop-time">10 AM</span>
+                        Mesh Radio
+                        <span class="virtual-badge">Virtual</span>
+                    </a>
+                </div>
+                <div class="day"><span class="date">13</span>
+                    <a href="#off-grid-power" class="workshop workshop-power">
+                        <span class="workshop-time">6 PM</span>
+                        Off-Grid Power
+                    </a>
+                </div>
+                <div class="day"><span class="date">14</span></div>
+
+                <!-- Week 3 -->
+                <div class="day"><span class="date">15</span></div>
+                <div class="day"><span class="date">16</span>
+                    <a href="#off-grid-power" class="workshop workshop-power">
+                        <span class="workshop-time">6 PM</span>
+                        Off-Grid Power
+                    </a>
+                </div>
+                <div class="day"><span class="date">17</span>
+                    <a href="#mesh-radio" class="workshop workshop-mesh">
+                        <span class="workshop-time">10 AM</span>
+                        Mesh Radio
+                    </a>
+                </div>
+                <div class="day"><span class="date">18</span></div>
+                <div class="day"><span class="date">19</span>
+                    <a href="#wildcard" class="workshop workshop-wildcard">
+                        <span class="workshop-time">10 AM</span>
+                        Rainwater Capture
+                    </a>
+                </div>
+                <div class="day"><span class="date">20</span>
+                    <a href="#telemetry" class="workshop workshop-telemetry">
+                        <span class="workshop-time">6 PM</span>
+                        Telemetry
+                    </a>
+                </div>
+                <div class="day"><span class="date">21</span></div>
+
+                <!-- Week 4 -->
+                <div class="day"><span class="date">22</span></div>
+                <div class="day"><span class="date">23</span>
+                    <a href="#wildcard" class="workshop workshop-wildcard">
+                        <span class="workshop-time">6 PM</span>
+                        Temp Monitoring
+                    </a>
+                </div>
+                <div class="day"><span class="date">24</span>
+                    <a href="#telemetry" class="workshop workshop-telemetry">
+                        <span class="workshop-time">10 AM</span>
+                        Telemetry
+                    </a>
+                </div>
+                <div class="day"><span class="date">25</span></div>
+                <div class="day"><span class="date">26</span>
+                    <a href="#off-grid-power" class="workshop workshop-power virtual">
+                        <span class="workshop-time">10 AM</span>
+                        Off-Grid Power
+                        <span class="virtual-badge">Virtual</span>
+                    </a>
+                </div>
+                <div class="day"><span class="date">27</span>
+                    <a href="#mesh-radio" class="workshop workshop-mesh">
+                        <span class="workshop-time">6 PM</span>
+                        Mesh Radio
+                    </a>
+                </div>
+                <div class="day"><span class="date">28</span></div>
+
+                <!-- Week 5 -->
+                <div class="day"><span class="date">29</span></div>
+                <div class="day"><span class="date">30</span>
+                    <a href="#mesh-radio" class="workshop workshop-mesh">
+                        <span class="workshop-time">6 PM</span>
+                        Mesh Radio
+                    </a>
+                </div>
+                <div class="day"><span class="date">31</span>
+                    <a href="#wildcard" class="workshop workshop-wildcard">
+                        <span class="workshop-time">10 AM</span>
+                        Solar Charging
+                    </a>
+                </div>
+                <div class="day empty"></div>
+                <div class="day empty"></div>
+                <div class="day empty"></div>
+                <div class="day empty"></div>
+            </div>
+        </div>
+
+        <!-- ===================== APRIL 2026 ===================== -->
+        <div class="month">
+            <h3>April 2026</h3>
+            <div class="calendar-grid">
+                <div class="day-header">Sun</div>
+                <div class="day-header">Mon</div>
+                <div class="day-header">Tue</div>
+                <div class="day-header">Wed</div>
+                <div class="day-header">Thu</div>
+                <div class="day-header">Fri</div>
+                <div class="day-header">Sat</div>
+
+                <!-- Week 1 (April starts on Wednesday) -->
+                <div class="day empty"></div>
+                <div class="day empty"></div>
+                <div class="day empty"></div>
+                <div class="day"><span class="date">1</span></div>
+                <div class="day"><span class="date">2</span>
+                    <a href="#mesh-radio" class="workshop workshop-mesh">
+                        <span class="workshop-time">10 AM</span>
+                        Mesh Radio
+                    </a>
+                </div>
+                <div class="day"><span class="date">3</span>
+                    <a href="#telemetry" class="workshop workshop-telemetry">
+                        <span class="workshop-time">6 PM</span>
+                        Telemetry
+                    </a>
+                </div>
+                <div class="day"><span class="date">4</span></div>
+
+                <!-- Week 2 -->
+                <div class="day"><span class="date">5</span></div>
+                <div class="day"><span class="date">6</span>
+                    <a href="#off-grid-power" class="workshop workshop-power">
+                        <span class="workshop-time">6 PM</span>
+                        Off-Grid Power
+                    </a>
+                </div>
+                <div class="day"><span class="date">7</span>
+                    <a href="#telemetry" class="workshop workshop-telemetry">
+                        <span class="workshop-time">10 AM</span>
+                        Telemetry
+                    </a>
+                </div>
+                <div class="day"><span class="date">8</span></div>
+                <div class="day"><span class="date">9</span>
+                    <a href="#wildcard" class="workshop workshop-wildcard virtual">
+                        <span class="workshop-time">10 AM</span>
+                        Garden Carts
+                        <span class="virtual-badge">Virtual</span>
+                    </a>
+                </div>
+                <div class="day"><span class="date">10</span>
+                    <a href="#mesh-radio" class="workshop workshop-mesh">
+                        <span class="workshop-time">6 PM</span>
+                        Mesh Radio
+                    </a>
+                </div>
+                <div class="day"><span class="date">11</span></div>
+
+                <!-- Week 3 -->
+                <div class="day"><span class="date">12</span></div>
+                <div class="day"><span class="date">13</span>
+                    <a href="#telemetry" class="workshop workshop-telemetry">
+                        <span class="workshop-time">6 PM</span>
+                        Telemetry
+                    </a>
+                </div>
+                <div class="day"><span class="date">14</span>
+                    <a href="#off-grid-power" class="workshop workshop-power">
+                        <span class="workshop-time">10 AM</span>
+                        Off-Grid Power
+                    </a>
+                </div>
+                <div class="day"><span class="date">15</span></div>
+                <div class="day"><span class="date">16</span>
+                    <a href="#mesh-radio" class="workshop workshop-mesh">
+                        <span class="workshop-time">10 AM</span>
+                        Mesh Radio
+                    </a>
+                </div>
+                <div class="day"><span class="date">17</span>
+                    <a href="#wildcard" class="workshop workshop-wildcard">
+                        <span class="workshop-time">6 PM</span>
+                        Cold Frames
+                    </a>
+                </div>
+                <div class="day"><span class="date">18</span></div>
+
+                <!-- Week 4 -->
+                <div class="day"><span class="date">19</span></div>
+                <div class="day"><span class="date">20</span>
+                    <a href="#mesh-radio" class="workshop workshop-mesh">
+                        <span class="workshop-time">6 PM</span>
+                        Mesh Radio
+                    </a>
+                </div>
+                <div class="day"><span class="date">21</span>
+                    <a href="#wildcard" class="workshop workshop-wildcard">
+                        <span class="workshop-time">10 AM</span>
+                        Rainwater Capture
+                    </a>
+                </div>
+                <div class="day"><span class="date">22</span></div>
+                <div class="day"><span class="date">23</span>
+                    <a href="#telemetry" class="workshop workshop-telemetry virtual">
+                        <span class="workshop-time">10 AM</span>
+                        Telemetry
+                        <span class="virtual-badge">Virtual</span>
+                    </a>
+                </div>
+                <div class="day"><span class="date">24</span>
+                    <a href="#off-grid-power" class="workshop workshop-power">
+                        <span class="workshop-time">6 PM</span>
+                        Off-Grid Power
+                    </a>
+                </div>
+                <div class="day"><span class="date">25</span></div>
+
+                <!-- Week 5 -->
+                <div class="day"><span class="date">26</span></div>
+                <div class="day"><span class="date">27</span>
+                    <a href="#wildcard" class="workshop workshop-wildcard">
+                        <span class="workshop-time">6 PM</span>
+                        Temp Monitoring
+                    </a>
+                </div>
+                <div class="day"><span class="date">28</span>
+                    <a href="#mesh-radio" class="workshop workshop-mesh">
+                        <span class="workshop-time">10 AM</span>
+                        Mesh Radio
+                    </a>
+                </div>
+                <div class="day"><span class="date">29</span></div>
+                <div class="day"><span class="date">30</span>
+                    <a href="#off-grid-power" class="workshop workshop-power">
+                        <span class="workshop-time">10 AM</span>
+                        Off-Grid Power
+                    </a>
+                </div>
+                <div class="day empty"></div>
+                <div class="day empty"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WORKSHOP DESCRIPTIONS -->
+    <section class="workshops-section">
+        <h2>Workshop Descriptions</h2>
+
+        <!-- MESH RADIO -->
+        <article id="mesh-radio" class="workshop-card workshop-mesh-card">
+            <div class="workshop-header">
+                <h3>Intro to Mesh Radio</h3>
+                <span class="badge badge-beginner">Beginner-Friendly</span>
+            </div>
+            <p>
+                Learn how to build and deploy your own mesh radio node using LoRa technology.
+                Mesh networks let communities communicate even when cell towers and internet are down -
+                perfect for emergency preparedness, outdoor adventures, or just staying connected with neighbors.
+            </p>
+            <h4>What You'll Learn</h4>
+            <ul>
+                <li>How mesh radio networks work and why they matter</li>
+                <li>Setting up and configuring a Meshtastic node</li>
+                <li>Connecting with other nodes in your area</li>
+                <li>Best practices for range and reliability</li>
+            </ul>
+            <h4>Take Home</h4>
+            <p>Optional: Purchase a ready-to-use radio node kit for <strong>$30</strong> to take home and join the local mesh network.</p>
+            <a href="mailto:info@waterbearfieldschool.org?subject=Register: Mesh Radio Workshop" class="register-btn">Register for This Workshop</a>
+        </article>
+
+        <!-- OFF-GRID POWER -->
+        <article id="off-grid-power" class="workshop-card workshop-power-card">
+            <div class="workshop-header">
+                <h3>Intro to DIY Off-Grid Power</h3>
+                <span class="badge badge-beginner">Beginner-Friendly</span>
+            </div>
+            <p>
+                Discover how to generate and store your own electricity using solar panels and human power.
+                We'll cover small-scale systems perfect for charging devices, running lights, and building
+                resilience into your home or community space.
+            </p>
+            <h4>What You'll Learn</h4>
+            <ul>
+                <li>Solar panel basics: sizing, orientation, and wiring</li>
+                <li>Battery selection and safe charging practices</li>
+                <li>Building a portable solar charging station</li>
+                <li>Bike-powered generators (some sessions)</li>
+            </ul>
+            <h4>Take Home</h4>
+            <p>Knowledge to build your own system. Component lists and local sourcing tips provided.</p>
+            <a href="mailto:info@waterbearfieldschool.org?subject=Register: Off-Grid Power Workshop" class="register-btn">Register for This Workshop</a>
+        </article>
+
+        <!-- TELEMETRY -->
+        <article id="telemetry" class="workshop-card workshop-telemetry-card">
+            <div class="workshop-header">
+                <h3>Intro to Off-Grid Telemetry</h3>
+                <span class="badge badge-beginner">Beginner-Friendly</span>
+            </div>
+            <p>
+                Build sensors to monitor temperature, humidity, soil moisture, and more - all without
+                relying on cloud services or monthly fees. Perfect for greenhouses, root cellars,
+                beehives, chicken coops, or anywhere you need to keep an eye on conditions.
+            </p>
+            <h4>What You'll Learn</h4>
+            <ul>
+                <li>Sensor basics: what to measure and why</li>
+                <li>Setting up low-power monitoring devices</li>
+                <li>Viewing your data locally or over mesh radio</li>
+                <li>Practical applications for farms, gardens, and homes</li>
+            </ul>
+            <h4>Take Home</h4>
+            <p>Optional: Purchase a sensor kit for <strong>$30</strong> to monitor your own space.</p>
+            <a href="mailto:info@waterbearfieldschool.org?subject=Register: Telemetry Workshop" class="register-btn">Register for This Workshop</a>
+        </article>
+
+        <!-- WILDCARD -->
+        <article id="wildcard" class="workshop-card workshop-wildcard-card">
+            <div class="workshop-header">
+                <h3>Wildcard Workshops</h3>
+                <span class="badge badge-beginner">Beginner-Friendly</span>
+            </div>
+            <p>
+                These rotating sessions cover a variety of practical skills for self-sufficiency and
+                community resilience. Check the calendar for the specific topic each week.
+            </p>
+            <h4>Rotating Topics Include</h4>
+            <ul>
+                <li><strong>Cold Frames &amp; Hoop Houses</strong> - Extend your growing season with simple structures</li>
+                <li><strong>Rainwater Capture</strong> - Harvest and store water for gardens and emergencies</li>
+                <li><strong>Temperature Monitoring</strong> - Build sensors for greenhouses and freezers</li>
+                <li><strong>Solar Charging Stations</strong> - Create phone/device charging kiosks</li>
+                <li><strong>Garden Carts &amp; Fixtures</strong> - Build useful outdoor infrastructure</li>
+            </ul>
+            <a href="mailto:info@waterbearfieldschool.org?subject=Register: Wildcard Workshop" class="register-btn">Register for This Workshop</a>
+        </article>
+    </section>
+
+    <!-- PRICING SECTION -->
+    <section class="pricing-section">
+        <h2>Pricing &amp; Solidarity</h2>
+        <p>
+            We use a solidarity pricing model because we believe everyone should have access to these skills,
+            regardless of their financial situation. Choose the tier that works for you - no questions asked.
+        </p>
+        <div class="pricing-tiers">
+            <div class="tier tier-solidarity">
+                <div class="tier-price">$30</div>
+                <div class="tier-name">Solidarity Rate</div>
+                <p>If cost is a barrier, this rate is for you. We want you here.</p>
+            </div>
+            <div class="tier tier-standard">
+                <div class="tier-price">$60</div>
+                <div class="tier-name">Standard Rate</div>
+                <p>Covers materials and supports the workshop series.</p>
+            </div>
+            <div class="tier tier-supporter">
+                <div class="tier-price">$90+</div>
+                <div class="tier-name">Supporter Rate</div>
+                <p>Your generosity helps others attend at the solidarity rate.</p>
+            </div>
+        </div>
+        <div class="hardware-note">
+            <h4>Hardware Kits</h4>
+            <p>
+                Many workshops offer optional hardware kits (radio nodes, sensors, etc.) for <strong>$30</strong>.
+                You'll learn with provided equipment during the workshop - purchasing is totally optional.
+            </p>
+        </div>
+    </section>
+
+    <!-- VIRTUAL SESSIONS INFO -->
+    <section class="virtual-section">
+        <h2>Virtual Sessions</h2>
+        <p>
+            Some workshops are offered virtually (marked with a <span class="virtual-badge-inline">Virtual</span> badge on the calendar).
+            For virtual sessions:
+        </p>
+        <ul>
+            <li><strong>Register at least 2 weeks in advance</strong> so we can mail you a kit</li>
+            <li>You'll receive a hardware kit and video link before the session</li>
+            <li>Same hands-on experience, from wherever you are</li>
+        </ul>
+    </section>
+
+    <!-- REGISTRATION / CONTACT -->
+    <section class="contact-section">
+        <h2>Ready to Join?</h2>
+        <p>
+            Click the register button on any workshop above, or email us directly at:<br>
+            <a href="mailto:info@waterbearfieldschool.org" class="email-link">info@waterbearfieldschool.org</a>
+        </p>
+        <p>
+            Let us know which workshop(s) you're interested in and your preferred date(s).
+            We'll send you the exact location and any preparation details.
+        </p>
+        <p class="minimum-note">
+            <strong>Note:</strong> Workshops require a minimum of 2 participants to run.
+            We'll confirm your session a few days before the scheduled date.
+        </p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <p>
+            <a href="https://waterbearfieldschool.org">Water Bearfield School</a> -
+            A cooperative skill-sharing group focused on nature, building, and community resilience.
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

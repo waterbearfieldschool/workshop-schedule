@@ -1,0 +1,645 @@
+/* ===========================================
+   WATER BEARFIELD SCHOOL - WORKSHOP SCHEDULE
+
+   Color Palette (easy to customize):
+   - Edit the CSS variables below to change colors site-wide
+   =========================================== */
+
+:root {
+    /* Main brand colors - edit these to change the whole site's look */
+    --color-primary: #2d6a4f;      /* Deep green */
+    --color-secondary: #40916c;    /* Medium green */
+    --color-accent: #f77f00;       /* Warm orange */
+    --color-highlight: #d62828;    /* Bold red */
+
+    /* Workshop-specific colors */
+    --color-mesh: #7209b7;         /* Purple for mesh radio */
+    --color-power: #f77f00;        /* Orange for off-grid power */
+    --color-telemetry: #0096c7;    /* Blue for telemetry */
+    --color-wildcard: #2d6a4f;     /* Green for wildcard */
+
+    /* Neutral colors */
+    --color-bg: #fefae0;           /* Warm cream background */
+    --color-bg-alt: #faedcd;       /* Slightly darker cream */
+    --color-text: #283618;         /* Dark green-brown text */
+    --color-text-light: #606c38;   /* Lighter text */
+
+    /* Spacing */
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 2rem;
+    --space-xl: 3rem;
+
+    /* Border radius */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 16px;
+}
+
+/* Reset and base styles */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4 {
+    line-height: 1.2;
+    margin-top: 0;
+}
+
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    padding-left: 1.5rem;
+}
+
+/* ===========================================
+   HEADER
+   =========================================== */
+
+.site-header {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    color: white;
+    text-align: center;
+    padding: var(--space-xl) var(--space-md);
+}
+
+.site-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: var(--space-sm);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.tagline {
+    font-size: 1.25rem;
+    opacity: 0.95;
+    margin: 0;
+}
+
+/* ===========================================
+   INTRO SECTION
+   =========================================== */
+
+.intro {
+    background: var(--color-bg-alt);
+    padding: var(--space-xl) var(--space-md);
+}
+
+.intro-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.intro h2 {
+    color: var(--color-primary);
+    font-size: 2rem;
+    margin-bottom: var(--space-md);
+}
+
+.intro p {
+    font-size: 1.1rem;
+    margin-bottom: var(--space-md);
+}
+
+.intro-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+}
+
+.highlight {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    background: white;
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    font-weight: 500;
+}
+
+.highlight-icon {
+    font-size: 1.5rem;
+}
+
+/* ===========================================
+   CALENDAR SECTION
+   =========================================== */
+
+.calendar-section {
+    padding: var(--space-xl) var(--space-md);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.calendar-section > h2 {
+    text-align: center;
+    color: var(--color-primary);
+    font-size: 2rem;
+    margin-bottom: var(--space-md);
+}
+
+.calendar-note {
+    text-align: center;
+    background: white;
+    padding: var(--space-md);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-xl);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* Individual month container */
+.month {
+    margin-bottom: var(--space-xl);
+}
+
+.month h3 {
+    background: var(--color-primary);
+    color: white;
+    padding: var(--space-md);
+    border-radius: var(--radius-md) var(--radius-md) 0 0;
+    margin: 0;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+/* Calendar grid */
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    background: white;
+    border: 2px solid var(--color-primary);
+    border-top: none;
+    border-radius: 0 0 var(--radius-md) var(--radius-md);
+}
+
+.day-header {
+    background: var(--color-bg-alt);
+    padding: var(--space-sm);
+    text-align: center;
+    font-weight: 600;
+    color: var(--color-text-light);
+    border-bottom: 1px solid #ddd;
+}
+
+.day {
+    min-height: 100px;
+    padding: var(--space-sm);
+    border-right: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    position: relative;
+}
+
+.day:nth-child(7n) {
+    border-right: none;
+}
+
+.day.empty {
+    background: #f9f9f9;
+}
+
+.date {
+    display: block;
+    font-weight: 600;
+    color: var(--color-text-light);
+    margin-bottom: var(--space-sm);
+}
+
+/* Workshop links in calendar */
+.workshop {
+    display: block;
+    padding: 4px 6px;
+    border-radius: var(--radius-sm);
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 4px;
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.workshop:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    text-decoration: none;
+}
+
+.workshop-time {
+    display: block;
+    font-size: 0.65rem;
+    opacity: 0.9;
+}
+
+/* Workshop color coding */
+.workshop-mesh {
+    background: var(--color-mesh);
+}
+
+.workshop-power {
+    background: var(--color-power);
+}
+
+.workshop-telemetry {
+    background: var(--color-telemetry);
+}
+
+.workshop-wildcard {
+    background: var(--color-wildcard);
+}
+
+/* Virtual badge */
+.virtual-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.3);
+    padding: 1px 4px;
+    border-radius: 3px;
+    font-size: 0.6rem;
+    margin-top: 2px;
+}
+
+.virtual-badge-inline {
+    display: inline-block;
+    background: var(--color-highlight);
+    color: white;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* ===========================================
+   WORKSHOP DESCRIPTIONS
+   =========================================== */
+
+.workshops-section {
+    background: var(--color-bg-alt);
+    padding: var(--space-xl) var(--space-md);
+}
+
+.workshops-section h2 {
+    text-align: center;
+    color: var(--color-primary);
+    font-size: 2rem;
+    margin-bottom: var(--space-xl);
+}
+
+.workshop-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    margin-bottom: var(--space-lg);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    border-left: 6px solid var(--color-primary);
+}
+
+.workshop-mesh-card {
+    border-left-color: var(--color-mesh);
+}
+
+.workshop-power-card {
+    border-left-color: var(--color-power);
+}
+
+.workshop-telemetry-card {
+    border-left-color: var(--color-telemetry);
+}
+
+.workshop-wildcard-card {
+    border-left-color: var(--color-wildcard);
+}
+
+.workshop-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-md);
+    margin-bottom: var(--space-md);
+}
+
+.workshop-card h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: var(--color-text);
+}
+
+.workshop-card h4 {
+    margin-top: var(--space-md);
+    margin-bottom: var(--space-sm);
+    color: var(--color-text-light);
+}
+
+/* Badges */
+.badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.badge-beginner {
+    background: #d8f3dc;
+    color: var(--color-primary);
+}
+
+/* Register button */
+.register-btn {
+    display: inline-block;
+    background: var(--color-accent);
+    color: white;
+    padding: var(--space-sm) var(--space-lg);
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    font-size: 1rem;
+    margin-top: var(--space-md);
+    transition: background 0.2s, transform 0.15s;
+}
+
+.register-btn:hover {
+    background: #e67300;
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+/* ===========================================
+   PRICING SECTION
+   =========================================== */
+
+.pricing-section {
+    padding: var(--space-xl) var(--space-md);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.pricing-section h2 {
+    text-align: center;
+    color: var(--color-primary);
+    font-size: 2rem;
+    margin-bottom: var(--space-md);
+}
+
+.pricing-section > p {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto var(--space-lg);
+    font-size: 1.1rem;
+}
+
+.pricing-tiers {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-lg);
+    margin-bottom: var(--space-lg);
+}
+
+.tier {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.tier:hover {
+    transform: translateY(-4px);
+}
+
+.tier-price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: var(--space-sm);
+}
+
+.tier-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: var(--space-md);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.tier p {
+    color: var(--color-text-light);
+    margin: 0;
+}
+
+.tier-solidarity {
+    border-top: 4px solid var(--color-telemetry);
+}
+
+.tier-solidarity .tier-price {
+    color: var(--color-telemetry);
+}
+
+.tier-standard {
+    border-top: 4px solid var(--color-accent);
+}
+
+.tier-standard .tier-price {
+    color: var(--color-accent);
+}
+
+.tier-supporter {
+    border-top: 4px solid var(--color-mesh);
+}
+
+.tier-supporter .tier-price {
+    color: var(--color-mesh);
+}
+
+.hardware-note {
+    background: var(--color-bg-alt);
+    padding: var(--space-lg);
+    border-radius: var(--radius-md);
+    text-align: center;
+}
+
+.hardware-note h4 {
+    margin-top: 0;
+    color: var(--color-primary);
+}
+
+.hardware-note p {
+    margin: 0;
+}
+
+/* ===========================================
+   VIRTUAL SECTION
+   =========================================== */
+
+.virtual-section {
+    background: var(--color-bg-alt);
+    padding: var(--space-xl) var(--space-md);
+}
+
+.virtual-section h2 {
+    text-align: center;
+    color: var(--color-primary);
+    margin-bottom: var(--space-md);
+}
+
+.virtual-section p,
+.virtual-section ul {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.virtual-section ul {
+    background: white;
+    padding: var(--space-lg);
+    padding-left: calc(var(--space-lg) + 1.5rem);
+    border-radius: var(--radius-md);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.virtual-section li {
+    margin-bottom: var(--space-sm);
+}
+
+/* ===========================================
+   CONTACT SECTION
+   =========================================== */
+
+.contact-section {
+    padding: var(--space-xl) var(--space-md);
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.contact-section h2 {
+    color: var(--color-primary);
+    margin-bottom: var(--space-md);
+}
+
+.email-link {
+    display: inline-block;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    margin: var(--space-md) 0;
+}
+
+.email-link:hover {
+    color: var(--color-highlight);
+}
+
+.minimum-note {
+    background: var(--color-bg-alt);
+    padding: var(--space-md);
+    border-radius: var(--radius-md);
+    margin-top: var(--space-lg);
+}
+
+/* ===========================================
+   FOOTER
+   =========================================== */
+
+.site-footer {
+    background: var(--color-primary);
+    color: white;
+    text-align: center;
+    padding: var(--space-lg);
+}
+
+.site-footer a {
+    color: white;
+    font-weight: 600;
+}
+
+.site-footer p {
+    margin: 0;
+}
+
+/* ===========================================
+   RESPONSIVE DESIGN
+   =========================================== */
+
+@media (max-width: 768px) {
+    .site-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .tagline {
+        font-size: 1rem;
+    }
+
+    .calendar-grid {
+        font-size: 0.85rem;
+    }
+
+    .day {
+        min-height: 80px;
+        padding: 4px;
+    }
+
+    .workshop {
+        font-size: 0.65rem;
+        padding: 2px 4px;
+    }
+
+    .workshop-time {
+        font-size: 0.55rem;
+    }
+
+    .day-header {
+        font-size: 0.75rem;
+        padding: 4px;
+    }
+
+    .intro-highlights {
+        flex-direction: column;
+    }
+
+    .pricing-tiers {
+        grid-template-columns: 1fr;
+    }
+
+    .workshop-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    .calendar-grid {
+        font-size: 0.75rem;
+    }
+
+    .day {
+        min-height: 60px;
+    }
+
+    .date {
+        font-size: 0.85rem;
+    }
+
+    .workshop {
+        font-size: 0.55rem;
+    }
+}
